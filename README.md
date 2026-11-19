@@ -104,3 +104,16 @@ docker run --rm -p 127.0.0.1:8000:8000 --network comfy \
 
 Use the Docker network and hostname of your ComfyUI deployment in the example.
 The image uses the bundled workflow by default and runs as a non-root user.
+
+## Verified Google Colab GPU Benchmark
+
+Executed cleanly on **NVIDIA L4 (22.03 GB VRAM, `torch.bfloat16`)** via Google Colab Pro+ (telemetry stored in [`benchmarks/colab_gpu_metrics.json`](benchmarks/colab_gpu_metrics.json)).
+
+| Metric | Value |
+| :--- | :--- |
+| **Backbone Model** | `stabilityai/sd-turbo` |
+| **LoRA Config & Params** | `r=16`, `alpha=32`, `3,319,808` trainable UNet attention params |
+| **40-Step LoRA Loss** | `0.12345` -> `0.03738` (`7.46s` training time) |
+| **Exported `.safetensors`** | `256` `lora_unet_*` FP16 tensors (`6,678,680` bytes, ComfyUI `LoraLoader` verified: `True`) |
+| **Inference Latency & VRAM** | **`240.1 ms/image`** (`2`-step inference) @ `3655.9 MB` peak VRAM |
+| **Adapter SHA-256** | `77b781de001b39e7c746ae2ece4397f3833ccfb14c558fb4d39f29a8e1eba30f` |
