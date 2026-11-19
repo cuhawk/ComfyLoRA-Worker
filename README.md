@@ -1,5 +1,7 @@
 # ComfyLoRA-Worker
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cuhawk/ComfyLoRA-Worker/blob/main/notebooks/comfyui_sd_turbo_lora_l4.ipynb)
+
 Headless FastAPI + async WebSocket queue worker for production **ComfyUI** pipelines, parameterized `.safetensors` LoRA workflow injection (`LoraLoader`), safetensors metadata verification, VRAM telemetry, and verified Colab GPU LoRA training benchmarks.
 
 ## Quick start
