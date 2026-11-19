@@ -1,0 +1,28 @@
+{
+  "gap": "Gap1_ComfyUI_LoRA_Training",
+  "gpu_name": "NVIDIA L4",
+  "vram_gb": 22.03,
+  "dtype": "torch.bfloat16",
+  "backbone_model": "stabilityai/sd-turbo",
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "trainable_params": 3319808,
+  "training_steps": 40,
+  "train_loss_start": 0.12345,
+  "train_loss_mid": 0.19997,
+  "train_loss_end": 0.03738,
+  "train_seconds": 7.46,
+  "lora_safetensors_bytes": 6678680,
+  "lora_safetensors_sha256": "77b781de001b39e7c746ae2ece4397f3833ccfb14c558fb4d39f29a8e1eba30f",
+  "lora_tensor_count": 256,
+  "sample_tensor_keys": [
+    "lora_unet_down_blocks_0_attentions_0_transformer_blocks_0_attn1_to_k.lora_down.weight",
+    "lora_unet_down_blocks_0_attentions_0_transformer_blocks_0_attn1_to_k.lora_up.weight",
+    "lora_unet_down_blocks_0_attentions_0_transformer_blocks_0_attn1_to_out_0.lora_down.weight",
+    "lora_unet_down_blocks_0_attentions_0_transformer_blocks_0_attn1_to_out_0.lora_up.weight"
+  ],
+  "comfyui_loraloader_verified": true,
+  "inference_ms_per_image": 240.1,
+  "peak_vram_mb": 3655.9,
+  "total_runtime_sec": 15.8
+}
